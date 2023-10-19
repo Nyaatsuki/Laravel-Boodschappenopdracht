@@ -1,10 +1,5 @@
 ## Script Laravel Grocery Task
 
-     __                                __
-    / /   \____ \__________ __   _____  / /
-   / /   / __ \`/ ___/ __ `/ | / / _ \/ / 
-  / /\___/ /\_/ / /  / /_/ /| |/ /  __/ /  
- /\_____/\__,\_/\_/   \__,\_/ |___/\___/_/   
-                                        
+_Insert cool Ascii logo_
 
 Task to learn how to work with Laravel
