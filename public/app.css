@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+nav{
+    position: fixed;
+    left: 10px;
+}
+
+.tabel {
+    display: grid;
+    grid-template-columns: 100px 100px 75px 100px;
+    grid-auto-rows: 25px;
+    justify-content: center;
+}
+
+#top-row {
+    font-weight: bolder;
+    border: 2px solid black;
+}
+
+li {
+    border: 1px solid black;
+    list-style-type: none;
+}
+
+ul {
+    display: table-row;
+}
+
+#bottom-row {
+    border: 1px solid black;
+    border-top-width: 2px;
+}

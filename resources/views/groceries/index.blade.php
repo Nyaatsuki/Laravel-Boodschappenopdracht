@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<x-layout>
+    <section class="tabel">
+        <div class="product" id="top-row">Product</div>
+        <div class="prijs" id="top-row">Aantal</div>
+        <div class="aantal" id="top-row">prijs</div>
+        <div class="subtotaal" id="top-row">Subtotaal</div>
+        @foreach ($groceries as $grocery)
+        <li>{{ $grocery->name }}</li>
+        <li>{{ $grocery->amount}}</li>
+        <li>{{ number_format($grocery->price, 2)}}</li>
+        <li>{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
+        @endforeach
+        <div class="product" id="bottom-row"></div>
+        <div class="prijs" id="bottom-row"></div>
+        <div class="aantal" id="bottom-row">Totaal</div>
+        <div class="subtotaal" id="bottom-row">€<?= array_sum($total); ?></disv>
+    </section>
+</x-layout>
