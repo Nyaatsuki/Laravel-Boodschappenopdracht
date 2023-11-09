@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Groceries;
 use Illuminate\Http\Request;
 
 class GroceriesController extends Controller
 {
     public function index(){
-        return "Index page";
+        dd(Groceries::all());
     }
 }
