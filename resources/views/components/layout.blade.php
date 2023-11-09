@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Groceries</title>
+    <title>Boodschappen Opdracht</title>
     <link rel="stylesheet" href="/app.css">
 </head>
 
