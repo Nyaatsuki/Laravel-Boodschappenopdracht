@@ -7,7 +7,7 @@
         <div class="subtotaal" id="top-row">Subtotaal</div>
         @foreach ($groceries as $grocery)
         <!--Entries-->
-        <li>{{ $grocery->name }}</li>
+        <li><a href="/groceries/{{ $grocery->name }}/edit">{{ $grocery->name }}</a></li>
         <li>{{ $grocery->amount}}</li>
         <li>€{{ number_format($grocery->price, 2)}}</li>
         <li>€{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
