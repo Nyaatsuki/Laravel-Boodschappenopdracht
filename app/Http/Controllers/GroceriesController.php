@@ -18,6 +18,6 @@ class GroceriesController extends Controller
     }
 
     public function create(){
-        echo "W.I.P";
+        return view('groceries/create');
     }
 }
