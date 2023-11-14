@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Groceries;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +14,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        Groceries::factory()->create([
+            'name' => 'Brood',
+            'amount' => '1',
+            'price' => '1.00'
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Groceries::factory()->create([
+            'name' => 'Brocolli',
+            'amount' => '2',
+            'price' => '0.99'
+        ]);
+
+        Groceries::factory()->create([
+            'name' => 'Krentebollen',
+            'amount' => '4',
+            'price' => '1.20'
+        ]);
+
+        Groceries::factory()->create([
+            'name' => 'Noten',
+            'amount' => '3',
+            'price' => '2.99'
+        ]);
     }
 }
