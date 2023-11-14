@@ -20,8 +20,4 @@ class GroceriesController extends Controller
     public function create(){
         echo "W.I.P";
     }
-
-    public function edit(){
-        echo "W.I.P";
-    }
 }
