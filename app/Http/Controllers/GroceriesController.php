@@ -16,4 +16,8 @@ class GroceriesController extends Controller
 
         return view('groceries/index', ['groceries' => $groceries, 'total' => $total]);;
     }
+
+    public function create(){
+        echo "W.I.P";
+    }
 }
