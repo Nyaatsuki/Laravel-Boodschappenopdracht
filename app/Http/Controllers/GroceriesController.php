@@ -20,4 +20,20 @@ class GroceriesController extends Controller
     public function create(){
         return view('groceries/create');
     }
+    
+    public function store(){
+        return "Store";
+    }
+
+    public function edit(){
+        return "Edit";
+    }
+
+    public function update(){
+        return "Update";
+    }
+
+    public function destroy(){
+        return "DELETE, DELETE, DELETE";
+    }
 }
