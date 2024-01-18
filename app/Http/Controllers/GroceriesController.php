@@ -26,7 +26,7 @@ class GroceriesController extends Controller
     }
 
     public function edit(){
-        return "Edit";
+        return view('groceries/edit');
     }
 
     public function update(){
