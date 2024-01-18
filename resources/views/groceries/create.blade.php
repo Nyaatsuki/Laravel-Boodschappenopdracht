@@ -6,5 +6,6 @@
         <input style="margin-left: 24px;" type="price"><br><br>
         <label>Amount:</label>
         <input type="amount"><br><br>
+        <button class=create-button type="button">Create</button>
     </div>
 </x-layout>

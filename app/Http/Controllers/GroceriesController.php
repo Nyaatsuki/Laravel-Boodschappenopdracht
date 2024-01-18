@@ -22,7 +22,7 @@ class GroceriesController extends Controller
     }
     
     public function store(){
-        return "Store";
+        return "You called the store method on the GroceriesController";
     }
 
     public function edit(){
