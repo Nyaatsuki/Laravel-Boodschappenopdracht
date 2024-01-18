@@ -11,6 +11,11 @@ nav {
     left: 10px;
 }
 
+.create-page {
+    display:block;
+    text-align: left;
+}
+
 .tabel {
     display: grid;
     grid-template-columns: 120px 75px 75px 100px;
