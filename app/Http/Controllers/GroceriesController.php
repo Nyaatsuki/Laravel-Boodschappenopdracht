@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class GroceriesController extends Controller
 {
+    #Get all groceries and display them on the Index page
     public function index(){
         $groceries = Groceries::all();
 
+        #Get the total cost of all groceries
         foreach ($groceries as $grocery){
             $total[] =  number_format($grocery->price * $grocery->amount, 2);
          }         
