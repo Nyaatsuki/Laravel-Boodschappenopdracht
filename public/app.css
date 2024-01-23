@@ -12,12 +12,29 @@ nav {
 }
 
 .create-page {
-    display:block;
+    display: block;
     text-align: left;
+    font-weight: bolder;
+    color: rgb(193, 112, 238);
+}
+
+.create-form {
+    border: 1px rgb(100, 9, 128) solid;
+    border-radius: 15px;
+    padding: 5px;
+    background: linear-gradient(140deg, rgb(80, 1, 126) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%);
+}
+
+.create-form input {
+    background: transparent;
+    border: #46008c 2px solid;
+    border-radius: 10px;
+    padding: 2px 0px;
 }
 
 .create-button {
-    background: linear-gradient(180deg, rgba(215,181,2,1) 0%, rgba(205,145,43,1) 95%);
+    margin-top: 5px;
+    background: linear-gradient(180deg, rgba(215, 181, 2, 1) 0%, rgba(205, 145, 43, 1) 95%);
     border: 2px goldenrod solid;
     border-radius: 15px;
     color: white;
@@ -26,7 +43,7 @@ nav {
 }
 
 .create-button:hover {
-    background: linear-gradient(180deg, rgba(210,170,2,1) 0%, rgba(200,140,43,1) 55%);
+    background: linear-gradient(180deg, rgba(210, 170, 2, 1) 0%, rgba(200, 140, 43, 1) 55%);
     border: 2px rgb(189, 141, 19) solid;
     border-radius: 15px;
 }
@@ -36,18 +53,19 @@ nav {
     grid-template-columns: 120px 75px 75px 100px;
     grid-auto-rows: 25px;
     justify-content: center;
+    background: linear-gradient(140deg, rgb(80, 1, 126) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%);
 }
 
 #top-row {
     font-weight: bolder;
-    border: 2px solid  rgb(66, 66, 66);
-    color: rgb(66, 66, 66);
-    background-color: rgb(187, 187, 187);
+    color: rgb(180, 101, 253);
+    background-color: rgb(101, 5, 165);
+    margin-bottom: 2px;
+    padding-top: 1px;
 }
 
 li {
-    border: 1px solid  rgb(66, 66, 66);
-    color: rgb(120, 120, 120);
+    color: rgb(241, 197, 255);
     list-style-type: none;
 }
 
@@ -56,7 +74,7 @@ ul {
 }
 
 #bottom-row {
-    border: 1px solid  rgb(66, 66, 66);
-    border-top-width: 2px;
-    color: rgb(120, 120, 120);
+    font-weight: bolder;
+    color: rgb(62, 8, 79);
+    border-top: 2px rgb(63, 0, 82) solid;
 }
