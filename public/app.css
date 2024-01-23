@@ -56,9 +56,8 @@ nav {
 
 .tabel {
     display: grid;
-    grid-template-columns: 120px 75px 75px 100px;
+    grid-template-columns: 120px 75px 75px 135px;
     grid-auto-rows: 25px;
-    justify-content: center;
     background: linear-gradient(140deg, rgb(80, 1, 126) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%);
     border-radius: 15px;
     overflow:hidden;
