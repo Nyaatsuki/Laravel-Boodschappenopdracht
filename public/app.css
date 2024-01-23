@@ -1,3 +1,5 @@
+/* Universal */
+
 body {
     display: flex;
     justify-content: center;
@@ -10,6 +12,8 @@ nav {
     position: fixed;
     left: 10px;
 }
+
+/* Create Page */
 
 .create-page {
     display: block;
@@ -48,20 +52,25 @@ nav {
     border-radius: 15px;
 }
 
+/* Index Page */
+
 .tabel {
     display: grid;
     grid-template-columns: 120px 75px 75px 100px;
     grid-auto-rows: 25px;
     justify-content: center;
     background: linear-gradient(140deg, rgb(80, 1, 126) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%);
+    border-radius: 15px;
+    overflow:hidden;
 }
 
 #top-row {
     font-weight: bolder;
-    color: rgb(180, 101, 253);
-    background-color: rgb(101, 5, 165);
+    background-color: rgb(75, 59, 89);
     margin-bottom: 2px;
     padding-top: 1px;
+    mix-blend-mode: plus-lighter;
+    overflow: hidden;
 }
 
 li {
@@ -76,5 +85,5 @@ ul {
 #bottom-row {
     font-weight: bolder;
     color: rgb(62, 8, 79);
-    border-top: 2px rgb(63, 0, 82) solid;
+    border-top: 2px rgb(75, 31, 104) solid;
 }
