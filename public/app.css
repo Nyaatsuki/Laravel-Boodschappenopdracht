@@ -39,7 +39,7 @@ nav a:hover {
     justify-content: center;
     text-align: left;
     font-weight: bolder;
-    color: rgb(200, 110, 240);
+    color: rgb(210, 150, 240);
 }
 
 .create-form {
@@ -54,6 +54,8 @@ nav a:hover {
     background: transparent;
     border: rgb(70, 0, 140) 2px solid;
     border-radius: 10px;
+    color: rgb(210, 150, 240);
+    font-weight: bold;
     padding: 2px 0px;
     appearance: textfield;
 }
