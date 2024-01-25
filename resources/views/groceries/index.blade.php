@@ -5,8 +5,8 @@
         <div class="prijs" id="top-row">Amount</div>
         <div class="aantal" id="top-row">Price</div>
         <div class="subtotaal" id="top-row">subtotal</div>
+        <!--Entries TODO: Cleanup display in inspector-->
         @foreach ($groceries as $grocery)
-        <!--Entries-->
         <li>{{ $grocery->name }}</li>
         <li>{{ $grocery->amount}}</li>
         <li>€{{ number_format($grocery->price, 2)}}</li>
