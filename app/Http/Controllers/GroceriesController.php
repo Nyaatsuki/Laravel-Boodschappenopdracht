@@ -16,7 +16,7 @@ class GroceriesController extends Controller
             $total[] =  number_format($grocery->price * $grocery->amount, 2);
          }         
 
-        return view('groceries/index', ['groceries' => $groceries, 'total' => $total]);;
+        return view('groceries/index', ['groceries' => $groceries, 'total' => $total]);
     }
 
     public function create(){
@@ -24,7 +24,15 @@ class GroceriesController extends Controller
     }
     
     public function store(){
-        return "You called the store method on the GroceriesController";
+        $attributes = request()->validate([
+            'name' => 'required',
+            'price' => 'required|decimal:2|',
+            'amount' => 'required'
+        ]);
+
+        Groceries::create($attributes);
+
+        return redirect("/");
     }
 
     public function edit(){

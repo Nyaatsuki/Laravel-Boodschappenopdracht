@@ -16,6 +16,6 @@
         <div class="product" id="bottom-row"></div>
         <div class="prijs" id="bottom-row"></div>
         <div class="aantal" id="bottom-row">Total:</div>
-        <div class="subtotaal" id="bottom-row">€{{ array_sum($total) }}</disv>
+        <div class="subtotaal" id="bottom-row">€{{ number_format(array_sum($total), 2) }}</disv>
     </section>
 </x-layout>
