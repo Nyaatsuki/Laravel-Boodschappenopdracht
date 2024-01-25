@@ -8,9 +8,11 @@
 
 <body>
     <nav>
-        <li><a href="/">Home</a></li>
-        <li><a href="/groceries/create">Create</a></li>
+        <a href="/">Home</a>
+        <a href="/groceries/create">Create</a>
     </nav>
+
+    <img class="logo" src="/images/Logo-Test.png" style="width: 0.75;">
     {{ $slot }}
 </body>
 
