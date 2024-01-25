@@ -1,14 +1,13 @@
 /* Universal */
 
 body {
-    display: flex;
-    justify-content: center;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
 }
 
 nav {
+    display: inline;
     position: fixed;
     left: 10px;
 }
@@ -16,7 +15,8 @@ nav {
 /* Create Page */
 
 .create-page {
-    display: block;
+    display: flex;
+    justify-content: center;
     text-align: left;
     font-weight: bolder;
     color: rgb(193, 112, 238);
@@ -54,6 +54,11 @@ nav {
 }
 
 /* Index Page */
+
+.index-page {
+    display: flex;
+    justify-content: center;
+}
 
 .tabel {
     display: grid;
