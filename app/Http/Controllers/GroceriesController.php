@@ -19,10 +19,12 @@ class GroceriesController extends Controller
         return view('groceries/index', ['groceries' => $groceries, 'total' => $total]);
     }
 
+    #Display the create page
     public function create(){
         return view('groceries/create');
     }
     
+    #Store the groceries when they're created on the create page
     public function store(){
         $attributes = request()->validate([
             'name' => 'required',
