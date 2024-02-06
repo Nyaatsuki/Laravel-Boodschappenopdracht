@@ -10,6 +10,7 @@ class GroceriesController extends Controller
     public function index()
     {
 
+        #Get all groceries
         $groceries = Groceries::all();
 
         #If there are no groceries, No total should be calculated
