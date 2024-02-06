@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Groceries;
-use Illuminate\Http\Request;
-use Illuminate\Support\HtmlString;
 
 class GroceriesController extends Controller
 {
@@ -53,6 +51,7 @@ class GroceriesController extends Controller
 
     public function destroy()
     {
-        return view('groceries/grocery');
+        $msg = '<a> A life for a life. Aye, Mr. Gibbons? </a>';
+        return view('groceries/grocery' , ['msg' => $msg]);
     }
 }

@@ -1,3 +1,5 @@
 <x-layout>
-    <a>WE PUT THE GROCERY HERE WEEEEEEEEEE</a>
+    <img src="test.png" alt="FUCK WHERE IS THE IMAGE?!">
+    <br>
+    {!! $msg !!}
 </x-layout>
