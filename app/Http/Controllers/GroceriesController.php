@@ -59,7 +59,7 @@ class GroceriesController extends Controller
     public function update()
     {
         #TODO Update entry
-        return 'UPDATE';
+        return "This does not work yet teehee! You can go back to the home page <a href='/'>here<a>";
     }
 
     #Destroy the grocery based on it's ID requested via the route
