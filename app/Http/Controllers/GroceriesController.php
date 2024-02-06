@@ -9,7 +9,13 @@ class GroceriesController extends Controller
     #Get all groceries and display them on the Index page
     public function index()
     {
+
         $groceries = Groceries::all();
+
+        #If there are no groceries, No total should be calculated
+        if($groceries->isEmpty()){
+            $total = 0;
+        }
 
         #Get the total cost of all groceries
         foreach ($groceries as $grocery) {
@@ -49,9 +55,14 @@ class GroceriesController extends Controller
         return "Update";
     }
 
+    #Destroy the grocery based on it's ID requested via the route
     public function destroy()
     {
-        $msg = '<a> A life for a life. Aye, Mr. Gibbons? </a>';
-        return view('groceries/grocery' , ['msg' => $msg]);
+        $id = request()->route('grocery');
+    
+        $grocery = Groceries::find($id);
+        $grocery->delete();
+
+        return redirect("/");
     }
 }

@@ -1,5 +1,6 @@
 <x-layout>
     <section class="index-page">
+        @if($groceries->count())
         <section class="tabel">
             <!--Top Row-->
             <div class="product" id="top-row">Product</div>
@@ -31,5 +32,8 @@
             <div id="bottom-row"></div>
             <div id="bottom-row"></div>
         </section>
+        @else
+        <a>You haven't created any groceries yet!</a>
+        @endif
     </section>
 </x-layout>
