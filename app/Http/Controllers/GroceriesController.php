@@ -45,14 +45,20 @@ class GroceriesController extends Controller
         return redirect("/");
     }
 
+    #Edit grocery
     public function edit()
     {
-        return view('groceries/edit');
+        #Request the id of the grocery and find it's database entry
+        $id = request()->route('grocery');
+        $grocery = Groceries::find($id);
+
+        return view('groceries/edit', ['grocery' => $grocery]);
     }
 
     public function update()
     {
-        return "Update";
+        #TODO Update entry
+        return 'UPDATE';
     }
 
     #Destroy the grocery based on it's ID requested via the route

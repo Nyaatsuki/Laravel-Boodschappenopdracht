@@ -15,9 +15,7 @@
             <li>{{ $grocery->amount}}</li>
             <li>€{{ number_format($grocery->price, 2)}}</li>
             <li>€{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
-            <form action="{{ route('groceries.edit', $grocery) }}">
-                <button type="submit">edit</button>
-            </form>
+            <a href="groceries/{{ $grocery->id }}/edit">Edit</a>
             <form action="{{ route('groceries.destroy', $grocery) }}" method="POST">
                 @csrf
                 @method('DELETE')
