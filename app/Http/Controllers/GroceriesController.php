@@ -46,6 +46,6 @@ class GroceriesController extends Controller
     }
 
     public function destroy(){
-        return "DELETE, DELETE, DELETE";
+        return view('groceries/grocery');
     }
 }

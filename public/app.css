@@ -70,8 +70,9 @@ nav a:hover {
     background: transparent;
     border: transparent;
     color: rgb(241, 197, 255);
-    font-size: medium;
     cursor: pointer;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .tabel button:hover {
