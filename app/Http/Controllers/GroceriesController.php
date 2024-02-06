@@ -13,7 +13,7 @@ class GroceriesController extends Controller
         $groceries = Groceries::all();
 
         #If there are no groceries, No total should be calculated
-        if($groceries->isEmpty()){
+        if ($groceries->isEmpty()) {
             $total = 0;
         }
 
@@ -59,7 +59,7 @@ class GroceriesController extends Controller
     public function destroy()
     {
         $id = request()->route('grocery');
-    
+
         $grocery = Groceries::find($id);
         $grocery->delete();
 
