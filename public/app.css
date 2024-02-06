@@ -12,7 +12,7 @@ nav {
     left: 10px;
 }
 
-nav a {
+#navButton {
     background: rgb(130, 0, 170) linear-gradient(-140deg, rgb(130, 0, 170) 0%, rgb(200, 40, 110) 100%);
     color: white;
     text-decoration: none;
@@ -21,7 +21,7 @@ nav a {
     transition: .3s;
 }
 
-nav a:hover {
+#navButton:hover {
     background: rgb(200, 40, 110);
 }
 

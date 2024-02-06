@@ -1,4 +1,3 @@
 <x-layout>
-    <img style="width:75px;" src="https://cdn3.emoji.gg/emojis/Dalek.png">
-    <a>DELETE, DELETE, DELETE</a>
+    <a>WE PUT THE GROCERY HERE WEEEEEEEEEE</a>
 </x-layout>
