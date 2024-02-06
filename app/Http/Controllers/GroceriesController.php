@@ -46,7 +46,7 @@ class GroceriesController extends Controller
         return redirect("/");
     }
 
-    #Edit grocery
+    #Display the edit page based on what Grocery is being edited
     public function edit()
     {
         #Request the id of the grocery and find it's database entry
