@@ -45,7 +45,7 @@ nav {
     grid-auto-rows: 25px;
     background: linear-gradient(140deg, rgb(80, 1, 130) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%);
     border-radius: 15px;
-    overflow:hidden;
+    overflow: hidden;
     margin-top: 50px;
 }
 
@@ -111,6 +111,13 @@ nav {
     font-weight: bold;
     padding: 2px 0px;
     appearance: textfield;
+}
+
+.create-form .alert {
+    color: rgb(115, 43, 43);
+    text-shadow: 1px 1px 0px black;
+    position: relative;
+    left: -40px;
 }
 
 .create-button {
