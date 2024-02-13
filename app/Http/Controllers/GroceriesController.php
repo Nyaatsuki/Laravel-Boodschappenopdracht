@@ -56,11 +56,13 @@ class GroceriesController extends Controller
         return view('groceries/edit', ['grocery' => $grocery]);
     }
 
+    #Update the grocery
     public function update()
     {
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
 
+        #Validate inputs and update accordingly
         if ($grocery) {
             $attributes = request()->validate([
                 'name' => 'required|min:2',
