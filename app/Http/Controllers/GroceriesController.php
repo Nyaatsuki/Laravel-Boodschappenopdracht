@@ -58,8 +58,17 @@ class GroceriesController extends Controller
 
     public function update()
     {
-        #TODO Update entry
-        return "This does not work yet teehee! You can go back to the home page <a href='/'>here<a>";
+        $id = request()->route('grocery');
+        $grocery = Groceries::find($id);
+
+        if($grocery) {
+            $grocery->name = request()->input('name');
+            $grocery->price = request()->input('price');
+            $grocery->amount = request()->input('amount');;
+            $grocery->save();
+        }
+
+        return redirect("/");
     }
 
     #Destroy the grocery based on it's ID requested via the route
