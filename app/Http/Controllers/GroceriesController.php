@@ -36,9 +36,9 @@ class GroceriesController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'name' => 'required',
+            'name' => 'required|min:2',
             'price' => 'required|decimal:2|',
-            'amount' => 'required'
+            'amount' => 'required|gt:0'
         ]);
 
         Groceries::create($attributes);
@@ -61,11 +61,13 @@ class GroceriesController extends Controller
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
 
-        if($grocery) {
-            $grocery->name = request()->input('name');
-            $grocery->price = request()->input('price');
-            $grocery->amount = request()->input('amount');;
-            $grocery->save();
+        if ($grocery) {
+            $attributes = request()->validate([
+                'name' => 'required|min:2',
+                'price' => 'required|decimal:2|',
+                'amount' => 'required|gt:0'
+            ]);
+            $grocery->update($attributes);
         }
 
         return redirect("/");
