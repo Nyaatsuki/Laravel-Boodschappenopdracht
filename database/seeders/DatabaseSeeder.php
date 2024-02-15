@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Category;
 use App\Models\Groceries;
 use Illuminate\Database\Seeder;
 
@@ -14,25 +15,42 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        #seed the Categories
+        $category = Category::create(['name' => 'Baked Goods']);
+        $category = Category::create(['name' => 'Beverages']);
+        $category = Category::create(['name' => 'Canned/Jarred Goods']);
+        $category = Category::create(['name' => 'Dairy']);
+        $category = Category::create(['name' => 'Dry/Baking Goods']);
+        $category = Category::create(['name' => 'Frozen Foods']);
+        $category = Category::create(['name' => 'Meat']);
+        $category = Category::create(['name' => 'Produce']);
+        $category = Category::create(['name' => 'Other']);
+
+
+        #Seed Groceries
         Groceries::factory()->create([
+            'category_id' => $category->find(1),
             'name' => 'Brood',
             'amount' => '1',
             'price' => '1.00'
         ]);
 
         Groceries::factory()->create([
+            'category_id' => $category->find(8),
             'name' => 'Brocolli',
             'amount' => '2',
             'price' => '0.99'
         ]);
 
         Groceries::factory()->create([
+            'category_id' => $category->find(1),
             'name' => 'Krentebollen',
             'amount' => '4',
             'price' => '1.20'
         ]);
 
         Groceries::factory()->create([
+            'category_id' => $category->find(9),
             'name' => 'Noten',
             'amount' => '3',
             'price' => '2.99'
