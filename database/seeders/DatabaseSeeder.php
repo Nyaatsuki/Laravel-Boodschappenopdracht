@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
     {
         #seed Categories
         $category = Category::create(['name' => 'Baked Goods']);
-        $category = Category::create(['name' => 'Baking Goods']);
         $category = Category::create(['name' => 'Beverages']);
         $category = Category::create(['name' => 'Canned Goods']);
         $category = Category::create(['name' => 'Dairy']);
+        $category = Category::create(['name' => 'Dry/Baking Goods']);
         $category = Category::create(['name' => 'Frozen Foods']);
         $category = Category::create(['name' => 'Meat']);
         $category = Category::create(['name' => 'Produce']);
