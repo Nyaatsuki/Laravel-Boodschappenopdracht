@@ -3,6 +3,12 @@
         <form method="POST" action="/groceries">
             @csrf
             <div class="create-form">
+                <label>Category:</label>
+                <select name='category_id'>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                </select><br><br>
                 <label>Product:</label>
                 <input style="margin-left: 2px;" type="name" name="name"><br><br>
                 <label>Price:</label>

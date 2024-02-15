@@ -4,6 +4,13 @@
             @csrf
             @method('PUT')
             <div class="create-form">
+            <label>Category:</label>
+                <select name='category_id'>
+                    <option value="{{$grocery->category->id}}" selected hidden>{{$grocery->category->name}}</option>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                </select><br><br>
                 <label>Product:</label>
                 <input style="margin-left: 2px;" type="name" name="name" value="{{ $grocery->name }}"><br><br>
                 <label>Price:</label>

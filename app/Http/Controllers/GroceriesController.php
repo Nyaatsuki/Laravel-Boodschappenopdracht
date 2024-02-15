@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Groceries;
 
 class GroceriesController extends Controller
@@ -29,7 +30,9 @@ class GroceriesController extends Controller
     #Display the create page
     public function create()
     {
-        return view('groceries/create');
+        $categories = Category::all();
+
+        return view('groceries/create', ['categories' => $categories]);
     }
 
     #Store the groceries
@@ -37,13 +40,14 @@ class GroceriesController extends Controller
     {
         #Validate groceries
         $attributes = request()->validate([
+            'category_id' => 'required',
             'name' => 'required|min:2',
             'price' => 'required|decimal:2|',
             'amount' => 'required|gt:0'
         ]);
-
+        
         Groceries::create($attributes);
-
+        
         return redirect("/");
     }
 
@@ -52,8 +56,9 @@ class GroceriesController extends Controller
     {
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
+        $categories = Category::all();
 
-        return view('groceries/edit', ['grocery' => $grocery]);
+        return view('groceries/edit', ['grocery' => $grocery, 'categories' => $categories]);
     }
 
     #Update the grocery parameters
@@ -65,6 +70,7 @@ class GroceriesController extends Controller
         #Validate inputs and update accordingly
         if ($grocery) {
             $attributes = request()->validate([
+                'category_id' => 'required',
                 'name' => 'required|min:2',
                 'price' => 'required|decimal:2|',
                 'amount' => 'required|gt:0'

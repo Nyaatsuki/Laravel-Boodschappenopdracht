@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         #Seed Groceries
         Groceries::factory()->create([
             'category_id' => $category->find(1),
-            'name' => 'Brood',
+            'name' => 'Bread',
             'amount' => '1',
             'price' => '1.00'
         ]);
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
 
         Groceries::factory()->create([
             'category_id' => $category->find(9),
-            'name' => 'Noten',
+            'name' => 'Nuts',
             'amount' => '3',
             'price' => '2.99'
         ]);

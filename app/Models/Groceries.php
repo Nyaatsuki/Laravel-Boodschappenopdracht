@@ -9,7 +9,7 @@ class Groceries extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'amount', 'price'];
+    protected $fillable = ['category_id','name', 'amount', 'price'];
 
     protected $with = ['category'];
 
