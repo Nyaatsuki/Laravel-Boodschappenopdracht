@@ -104,12 +104,12 @@ nav {
 }
 
 .create-form select {
-    border: 1px rgb(100, 18, 148) solid;
+    border: 1px rgb(100, 0, 130) solid;
     border-radius: 15px;
-    background: rgb(61, 62, 65);
-    color: rgb(209, 209, 209);
-    font-weight: bold;
+    color: rgb(210, 150, 240);
+    background: linear-gradient(140deg, rgb(80, 1, 130) 0%, rgb(123, 11, 255) 60%, rgb(194, 42, 110) 100%) rgb(123, 11, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 .create-form input {
