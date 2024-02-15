@@ -32,9 +32,10 @@ class GroceriesController extends Controller
         return view('groceries/create');
     }
 
-    #Store the groceries when they're created on the create page
+    #Store the groceries
     public function store()
     {
+        #Validate groceries
         $attributes = request()->validate([
             'name' => 'required|min:2',
             'price' => 'required|decimal:2|',
@@ -49,7 +50,6 @@ class GroceriesController extends Controller
     #Display edit view with grocery parameters
     public function edit()
     {
-        #Request the id of the grocery and find it's database entry
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
 
@@ -75,7 +75,7 @@ class GroceriesController extends Controller
         return redirect("/");
     }
 
-    #Destroy the grocery based on it's ID requested via the route
+    #Destroy the grocery
     public function destroy()
     {
         $id = request()->route('grocery');
