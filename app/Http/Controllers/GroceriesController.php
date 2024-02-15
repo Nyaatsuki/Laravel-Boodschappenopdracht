@@ -46,7 +46,7 @@ class GroceriesController extends Controller
         return redirect("/");
     }
 
-    #Display the edit page based on what Grocery is being edited
+    #Display edit view with grocery parameters
     public function edit()
     {
         #Request the id of the grocery and find it's database entry
@@ -56,7 +56,7 @@ class GroceriesController extends Controller
         return view('groceries/edit', ['grocery' => $grocery]);
     }
 
-    #Update the grocery
+    #Update the grocery parameters
     public function update()
     {
         $id = request()->route('grocery');
@@ -80,7 +80,7 @@ class GroceriesController extends Controller
     {
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
-        
+
         $grocery->delete();
 
         return redirect("/");
