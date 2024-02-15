@@ -39,7 +39,7 @@ nav {
     justify-content: center;
 }
 
-.tabel {
+.table {
     display: grid;
     grid-template-columns: 200px 120px 75px 75px 135px 75px 75px;
     grid-auto-rows: 25px;
@@ -57,16 +57,28 @@ nav {
     mix-blend-mode: plus-lighter;
 }
 
-.tabel li {
+.table li {
     color: rgb(241, 197, 255);
     list-style-type: none;
+    border-left: 1px rgba(0, 0, 0, 0.24) solid;
+    border-right: 1px rgba(0, 0, 0, 0.24) solid;
 }
 
-.tabel ul {
+.table a {
+    border-left: 1px rgba(0, 0, 0, 0.24) solid;
+    border-right: 1px rgba(0, 0, 0, 0.24) solid;
+}
+
+.table form {
+    border-left: 1px rgba(0, 0, 0, 0.24) solid;
+    border-right: 1px rgba(0, 0, 0, 0.24) solid;
+}
+
+.table ul {
     display: table-row;
 }
 
-.tabel button {
+.table button {
     background: transparent;
     border: transparent;
     color: rgb(241, 197, 255);
@@ -75,7 +87,7 @@ nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.tabel button:hover {
+.table button:hover {
     color: rgb(155, 116, 167);
 }
 

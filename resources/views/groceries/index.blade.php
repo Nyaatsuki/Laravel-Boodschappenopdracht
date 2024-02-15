@@ -1,7 +1,7 @@
 <x-layout>
     <section class="index-page">
         @if($groceries->count())
-        <section class="tabel">
+        <section class="table">
             <!--Top Row-->
             <div class="Category" id="top-row">Category</div>
             <div class="product" id="top-row">Product</div>
