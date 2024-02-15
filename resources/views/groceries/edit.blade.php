@@ -6,9 +6,9 @@
             <div class="create-form">
             <label>Category:</label>
                 <select name='category_id'>
-                    <option value="{{$grocery->category->id}}" selected hidden>{{$grocery->category->name}}</option>
+                    <option value="{{$grocery->category->id}}" selected hidden>{{UCWords($grocery->category->name)}}</option>
                     @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    <option value="{{$category->id}}">{{UCWords($category->name)}}</option>
                     @endforeach
                 </select><br><br>
                 <label>Product:</label>

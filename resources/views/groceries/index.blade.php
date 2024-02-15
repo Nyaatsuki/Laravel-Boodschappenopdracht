@@ -3,7 +3,7 @@
         @if($groceries->count())
         <section class="tabel">
             <!--Top Row-->
-            <div class="Category" id="top-row">Product</div>
+            <div class="Category" id="top-row">Category</div>
             <div class="product" id="top-row">Product</div>
             <div class="prijs" id="top-row">Amount</div>
             <div class="aantal" id="top-row">Price</div>
@@ -12,8 +12,8 @@
             <div id="top-row"></div>
             <!--Entries TODO: Cleanup display in inspector-->
             @foreach ($groceries as $grocery)
-            <li style="font-weight: bolder">{{$grocery->category->name}}</li>
-            <li>{{ $grocery->name }}</li>
+            <li style="font-weight: bolder">{{UCWords($grocery->category->name)}}</li>
+            <li>{{ UCWords($grocery->name) }}</li>
             <li>{{ $grocery->amount}}</li>
             <li>€{{ number_format($grocery->price, 2)}}</li>
             <li>€{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
