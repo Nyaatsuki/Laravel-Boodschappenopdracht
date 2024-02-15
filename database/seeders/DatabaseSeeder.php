@@ -15,17 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        #seed the Categories
+        #seed Categories
         $category = Category::create(['name' => 'Baked Goods']);
+        $category = Category::create(['name' => 'Baking Goods']);
         $category = Category::create(['name' => 'Beverages']);
         $category = Category::create(['name' => 'Canned Goods']);
         $category = Category::create(['name' => 'Dairy']);
-        $category = Category::create(['name' => 'Baking Goods']);
         $category = Category::create(['name' => 'Frozen Foods']);
         $category = Category::create(['name' => 'Meat']);
         $category = Category::create(['name' => 'Produce']);
         $category = Category::create(['name' => 'Other']);
-
 
         #Seed Groceries
         Groceries::factory()->create([
