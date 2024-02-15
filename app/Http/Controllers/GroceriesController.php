@@ -79,8 +79,8 @@ class GroceriesController extends Controller
     public function destroy()
     {
         $id = request()->route('grocery');
-
         $grocery = Groceries::find($id);
+        
         $grocery->delete();
 
         return redirect("/");
