@@ -12,7 +12,7 @@
             <div id="top-row"></div>
             <!--Entries TODO: Cleanup display in inspector-->
             @foreach ($groceries as $grocery)
-            <li style="font-weight: bolder">{{UCWords($grocery->category->name)}}</li>
+            <li>{{UCWords($grocery->category->name)}}</li>
             <li>{{ UCWords($grocery->name) }}</li>
             <li>{{ $grocery->amount}}</li>
             <li>€{{ number_format($grocery->price, 2)}}</li>
