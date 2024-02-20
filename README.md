@@ -11,3 +11,5 @@ A grocery list made using Laravel 10.x
 You can follow the installation for a laravel project [here](https://laravel.com/docs/10.x/installation)
 
 make sure to run Composer Install
+
+This repo is for a task at Script Groningen.
