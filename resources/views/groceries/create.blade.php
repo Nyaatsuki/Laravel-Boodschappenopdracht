@@ -15,16 +15,7 @@
                 <input style="margin-left: 24px;" type="number" name="price" step=".01"><br><br>
                 <label>Amount:</label>
                 <input type="number" name="amount"><br>
-                @if ($errors->any())
-                <div class="alert">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <label>{{ $error }}</label>
-                        <br>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
+                <x-errors></x-errors>
             </div>
             <button class=create-button type="submit">Create</button>
         </form>

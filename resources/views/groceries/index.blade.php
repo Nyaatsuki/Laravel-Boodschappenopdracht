@@ -10,7 +10,7 @@
             <div class="subtotaal" id="top-row">subtotal</div>
             <div id="top-row"></div>
             <div id="top-row"></div>
-            <!--Entries TODO: Cleanup display in inspector-->
+            <!--Entries-->
             @foreach ($groceries as $grocery)
             <li class="entries"><strong>{{ UCWords($grocery->name) }}</strong></li>
             <li class="entries">{{UCWords($grocery->category->name)}}</li>
