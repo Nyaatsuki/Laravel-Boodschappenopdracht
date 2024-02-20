@@ -1,5 +1,12 @@
-## Script Laravel Grocery Task
+# A Laravel Grocery List
 
-_Insert cool Ascii logo_
+A grocery list made using Laravel 10.x
 
-Task to learn how to work with Laravel
+## Requirements
+PHP 8.1 or above
+Laravel 10.x
+Composer
+
+## Installation
+You can follow the installation for a laravel project [here](https://laravel.com/docs/10.x/installation)
+make sure to run Composer Install
