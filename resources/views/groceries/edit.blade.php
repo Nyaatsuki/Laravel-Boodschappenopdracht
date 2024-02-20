@@ -4,7 +4,7 @@
             @csrf
             @method('PUT')
             <div class="create-form">
-            <label>Category:</label>
+                <label>Category:</label>
                 <select name='category_id'>
                     <option value="{{$grocery->category->id}}" selected hidden>{{UCWords($grocery->category->name)}}</option>
                     @foreach ($categories as $category)
@@ -16,7 +16,7 @@
                 <label>Price:</label>
                 <input style="margin-left: 24px;" type="number" name="price" step=".01" value="{{ $grocery->price }}"><br><br>
                 <label>Amount:</label>
-                <input type="number" name="amount" value="{{ $grocery->amount }}"><br>
+                <input type="number" name="amount" value="{{ $grocery->amount }}">
                 <x-errors></x-errors>
             </div>
             <button class=create-button type="submit">Edit</button>

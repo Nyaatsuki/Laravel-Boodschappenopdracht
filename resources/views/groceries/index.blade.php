@@ -4,7 +4,7 @@
         <section class="table">
             <!--Top Row-->
             <div class="product" id="top-row">Product</div>
-            <div class="Category" id="top-row">Category</div>
+            <div class="category" id="top-row">Category</div>
             <div class="prijs" id="top-row">Amount</div>
             <div class="aantal" id="top-row">Price</div>
             <div class="subtotaal" id="top-row">subtotal</div>
