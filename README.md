@@ -9,4 +9,5 @@ Composer
 
 ## Installation
 You can follow the installation for a laravel project [here](https://laravel.com/docs/10.x/installation)
+
 make sure to run Composer Install
