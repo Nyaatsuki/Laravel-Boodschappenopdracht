@@ -12,16 +12,16 @@
             <div id="top-row"></div>
             <!--Entries TODO: Cleanup display in inspector-->
             @foreach ($groceries as $grocery)
-            <li><strong>{{ UCWords($grocery->name) }}</strong></li>
-            <li>{{UCWords($grocery->category->name)}}</li>
-            <li>{{ $grocery->amount}}</li>
-            <li>€{{ number_format($grocery->price, 2)}}</li>
-            <li>€{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
-            <a href="groceries/{{ $grocery->id }}/edit">Edit</a>
-            <form action="{{ route('groceries.destroy', $grocery) }}" method="POST">
+            <li class="entries"><strong>{{ UCWords($grocery->name) }}</strong></li>
+            <li class="entries">{{UCWords($grocery->category->name)}}</li>
+            <li class="entries">{{ $grocery->amount}}</li>
+            <li class="entries">€{{ number_format($grocery->price, 2)}}</li>
+            <li class="entries">€{{ number_format($grocery->price * $grocery->amount, 2)}}</li>
+            <a class="entries" href="groceries/{{ $grocery->id }}/edit">Edit</a>
+            <form class="entries" action="{{ route('groceries.destroy', $grocery) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button value="submit">delete</button> 
+                <button value="submit">Delete</button> 
             </form>
             @endforeach
             <!--Bottom Row-->
