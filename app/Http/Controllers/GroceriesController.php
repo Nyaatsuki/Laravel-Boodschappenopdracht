@@ -15,11 +15,13 @@ class GroceriesController extends Controller
         $groceries = Groceries::all();
 
         #If there are no groceries, No total should be calculated
+        // TODO: onderstaande controle is overbodig
         if ($groceries->isEmpty()) {
             $total = 0;
         }
 
         #Get the total cost of all groceries
+        // TODO: onderstaande code is ok, maar je zou een array_reduce kunnen gebruiken als interessant alternatief
         foreach ($groceries as $grocery) {
             $total[] =  number_format($grocery->price * $grocery->amount, 2);
         }
@@ -39,6 +41,8 @@ class GroceriesController extends Controller
     public function store()
     {
         #Validate groceries
+        // TODO: onderstaande code is prima, maar je kunt het nog modulairder maken door een aparte form request 
+        // class te schrijven die je dan ook kunt toepassen voor de update method
         $attributes = request()->validate([
             'category_id' => 'required',
             'name' => 'required|min:2',
@@ -54,6 +58,7 @@ class GroceriesController extends Controller
     #Display edit view with grocery parameters
     public function edit()
     {
+        // TODO: pas route-model binding toe om een query uit te sparen
         $id = request()->route('grocery');
         $grocery = Groceries::find($id);
         $categories = Category::all();

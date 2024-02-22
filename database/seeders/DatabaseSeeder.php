@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // TODO: maak voor iedere entiteit (categories, groceries, etc.) een aparte seeder, en roep
+        // deze allemaal afzonderlijk aan vanuit deze class
+
         #seed Categories
         $category = Category::create(['name' => 'Baked Goods']);
         $category = Category::create(['name' => 'Beverages']);

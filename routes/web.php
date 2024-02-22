@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TODO: onderstaande code is prima, maar als je minder typwerk wilt, kun je een Route::resource overwegen die
+// alle routes autmatisch genreert voor 1 resource entiteit
 Route::get('/groceries', [GroceriesController::class, 'index'])->name('groceries.index');
 Route::get('/groceries/create', [GroceriesController::class, 'create'])->name('groceries.create');
 Route::post('/groceries', [GroceriesController::class, 'store'])->name('groceries.store');
